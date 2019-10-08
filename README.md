@@ -10,3 +10,7 @@ Programa Golang para practicar Kanji.
 
      docker build . -t kanji
      docker run -it kanji
+
+Ejecutar el programa en el contenedor:
+
+     go run kangi.go
