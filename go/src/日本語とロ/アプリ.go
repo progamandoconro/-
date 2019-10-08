@@ -57,34 +57,53 @@ func main() {
 
 		fmt.Scanln(&q2)
 		if q2 == 3 {
+			fmt.Print("La opción 3. 会社 es la correcta: 会社 (かいしゃ). ")
+			time.Sleep(2000 * time.Millisecond)
+
 			fmt.Print("¿ Cúal Kanji significa agua ?")
 			time.Sleep(2000 * time.Millisecond)
 
 			fmt.Print("1. 速い 2. 一 3. 仕事 4. 水")
 			fmt.Scanln(&q3)
 			if q3 == 4 {
+				fmt.Print("La opción 4. 水 es la correcta: 水 (みず). ")
+				time.Sleep(2000 * time.Millisecond)
 
 				for {
-					fmt.Print("漢字, 会社, あなたが勝ちます")
-					time.Sleep(2000 * time.Millisecond)
+					fmt.Print("漢字, 会社, 水")
+					time.Sleep(200 * time.Millisecond)
 				}
 			} else {
 				fmt.Print("No has acertado, intenta de nuevo (pista, el agua pasa por el valle)")
 				for {
 					fmt.Print(kanji)
-					time.Sleep(2000 * time.Millisecond)
+					time.Sleep(20 * time.Millisecond)
+
 				}
+
 			}
 
 		} else {
 			fmt.Print("No has acertado, intenta de nuevo (pista, 会 significa reunión o congregación)")
-			fmt.Print(kanji)
+			time.Sleep(5000 * time.Millisecond)
+
+			for {
+				fmt.Print(kanji)
+				time.Sleep(20 * time.Millisecond)
+
+			}
 
 		}
 	} else {
 		fmt.Print("No has acertado, intenta de nuevo (pista, 子 (こ, ko) significa niño, los niños aprenden 漢字 rápido")
 		fmt.Print("La opción 1. 漢字 era la correcta: 漢字 (かんじ)")
-		fmt.Print(kanji)
+		time.Sleep(5000 * time.Millisecond)
+
+		for {
+			fmt.Print(kanji)
+			time.Sleep(20 * time.Millisecond)
+
+		}
 
 	}
 }
