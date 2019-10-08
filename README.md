@@ -1,4 +1,4 @@
-## Aprende a leer Kanji Japonés con Ro. 
+## Kanji Japonés. 
 Programa Golang para practicar Kanji.
 
 ## Usar con golang:     
