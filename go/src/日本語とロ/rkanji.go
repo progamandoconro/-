@@ -23,10 +23,10 @@ func loop() {
 
    s := strings.Split(a, "")
 
-for i := 1; i <= 100; i++ {
+for i := 0; i <= 6394; i++ {
 
-         fmt.Println(s)
-         time.Sleep(50 * time.Millisecond)
+         fmt.Println(s[i])
+         time.Sleep(500 * time.Millisecond)
 }
 }
 
