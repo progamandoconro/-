@@ -19,11 +19,29 @@ func loop() {
 
 	s := strings.Split(a, "")
 
+fmt.Println("Todos los Kanji")
+
 	for i := 0; i <= 6394; i++ {
 
 		fmt.Println(s[i])
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
 	}
+
+fmt.Println("Random Kanji Total")
+
+        time.Sleep(5 * time.Second)
+
+        for i := 0; i <= 10; i++ {
+                s1 := rand.NewSource(time.Now().UnixNano())
+                r1 := rand.New(s1)
+                r := r1.Intn(6394)
+                fmt.Println(s[r])
+                time.Sleep(1 * time.Second)
+        }
+
+
+
+
 }
 
 func frequent() {
@@ -32,11 +50,15 @@ func frequent() {
 
 	s := strings.Split(a, "")
 
-	for i := 0; i <= 100; i++ {
+fmt.Println("Kanjis Frecuentes")
+
+	for i := 0; i <= 99; i++ {
 
 		fmt.Println(s[i])
-		time.Sleep(1000 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
 	}
+
+	fmt.Println("Random Frecuentes")
 
 	time.Sleep(5 * time.Second)
 
@@ -45,7 +67,7 @@ func frequent() {
 		r1 := rand.New(s1)
 		r := r1.Intn(89)
 		fmt.Println(s[r])
-		time.Sleep(10 * time.Second)
+		time.Sleep(1 * time.Second)
 	}
 
 }
