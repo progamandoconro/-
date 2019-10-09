@@ -9,7 +9,7 @@ import(
 
 
 func main() {
-
+	frequent()
 	loop() 
 
 }
@@ -31,6 +31,19 @@ for i := 0; i <= 6394; i++ {
 }
 
 
+
+func frequent() {
+
+ 	a := "人一丨口日目儿見凵山出十八木未丶来大亅了子心土冂田思二丁彳行寸寺時卜上丿刀分厶禾私中彐尹事可亻何自乂又皮彼亠方生月門間扌手言女本乙气気干年三耂者刂前勹勿豕冖宀家今下白勺的云牛物立小文矢知入乍作聿書学合"
+  
+         s := strings.Split(a, "")
+
+	for i := 0; i <= 100; i++ {
+
+         fmt.Println(s[i])
+         time.Sleep(1000 * time.Millisecond)
+}
+}
 
 
 
