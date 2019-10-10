@@ -9,8 +9,10 @@ import (
 )
 
 func main() {
+	
 	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil)
+
+	http.ListenAndServe(":8095", nil)
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
@@ -23,14 +25,20 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println("Random Frecuentes")
 
-	time.Sleep(5 * time.Second)
-
-	for i := 0; i <= 10; i++ {
+	for i := 1; i <= 1; i++ {
 		s1 := rand.NewSource(time.Now().UnixNano())
 		r1 := rand.New(s1)
-		r := r1.Intn(89)
+		r := r1.Intn(99)
 		fmt.Fprintf(w, s[r])
-		time.Sleep(1 * time.Second)
+		time.Sleep(5 * time.Second)
+		
+
 	}
+
+
+
+
+
+
 
 }
