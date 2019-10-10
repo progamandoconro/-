@@ -1,4 +1,4 @@
-Data forked from:
+### Data obtained thanks to:
 
 https://github.com/scriptin/topokanji
 
