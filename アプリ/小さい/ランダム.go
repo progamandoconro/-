@@ -24,7 +24,7 @@ func loop() {
 	for i := 0; i <= 6394; i++ {
 
 		fmt.Println(s[i])
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(1 * time.Second)
 	}
 
 	fmt.Println("Random Kanji Total")
@@ -52,7 +52,7 @@ func frequent() {
 	for i := 0; i <= 99; i++ {
 
 		fmt.Println(s[i])
-		time.Sleep(50 * time.Millisecond)
+		time.Sleep(1 * time.Second)
 	}
 
 	fmt.Println("Random Frecuentes")
