@@ -1,24 +1,33 @@
+
 package main
 
 import (
-        "fmt"
-        "time"
-	//"strings"
-        "io/ioutil"
+    "bufio"
+    "fmt"
+    "os"
 )
 
-func main () {
-f := "データー/JmnedictFurigana.txt"
-d, err := ioutil.ReadFile(f)
- 
-if err != nil {
-        fmt.Println("File reading error", err)
-        return
+func LinesInFile(fileName string) []string {
+    f, _ := os.Open(fileName)
+    // Create new Scanner.
+    scanner := bufio.NewScanner(f)
+    result := []string{}
+    // Use Scan.
+    for scanner.Scan() {
+        line := scanner.Text()
+        // Append line to result.
+        result = append(result, line)
     }
-
-time.Sleep (1* time.Second)
-fmt.Println("Contents of file:", string(d))
-
-
+    return result
 }
 
+func main() {
+    // Loop over lines in file.
+    for index, line := range LinesInFile(`C:\programs\file.txt`) {
+        fmt.Printf("Index = %v, line = %v\n", index , line)
+    }
+
+    // Get count of lines.
+    lines := LinesInFile("データー/JmnedictFurigana.txt")
+    fmt.Println(lines)
+}
