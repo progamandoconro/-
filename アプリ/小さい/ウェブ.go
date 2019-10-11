@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
-	"github.com/gojp/kana"
+	"github.com/gojp/kana" //go get github.com/gojp/kana
 )
 
 var port string = ":8080"
