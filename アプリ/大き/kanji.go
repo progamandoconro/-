@@ -7,6 +7,8 @@ import (
 	"os"
 	"strings"
 	"time"
+	"github.com/gojp/kana"
+
 )
 
 func frequent() {
@@ -38,6 +40,13 @@ func frequent() {
 }
 
 func main() {
+
+	frequent()
+
+        for i:= 1; i <= 10; i++{
+        hiragana()
+        }
+
 
 	ranDic()
 
@@ -145,8 +154,7 @@ func main() {
 
 	}
 
-	frequent()
-
+	
 }
 
 func LinesInFile(fileName string) []string {
@@ -180,3 +188,19 @@ func ranDic() {
 
 	}
 }
+
+
+
+func hiragana () {
+var message string
+   
+     fmt.Println("Ingresa ROMANJI a transformar a HIRAGANA\n")
+     fmt.Scanln(&message)
+     k := kana.RomajiToHiragana(message)
+     fmt.Println(message + " en Hiragana se escribe:\n")
+     fmt.Println(k)
+     fmt.Println( "\n")
+
+
+}
+
