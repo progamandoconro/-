@@ -11,17 +11,13 @@ import (
 
 )
 
-
 func main() {
 
 	frequent()
-
         for i:= 1; i <= 10; i++{
         	hiragana()
         }
-	
 	game()
-
 }
 
 func frequent() {
@@ -143,9 +139,7 @@ func game () {
 				for i := 0; i <= 10; i++ {
 					fmt.Print(kanji)
 					time.Sleep(20 * time.Millisecond)
-
 				}
-
 			}
 
 		} else {
@@ -155,9 +149,7 @@ func game () {
 			for i := 0; i <= 10; i++ {
 				fmt.Print(kanji)
 				time.Sleep(20 * time.Millisecond)
-
 			}
-
 		}
 	} else {
 		fmt.Print("No has acertado, intenta de nuevo (pista, 子 (こ, ko) significa niño, los niños aprenden 漢字 rápido")
@@ -167,7 +159,6 @@ func game () {
 		for i := 0; i <= 10; i++ {
 			fmt.Print(kanji)
 			time.Sleep(20 * time.Millisecond)
-
 		}
 	}	
 }
