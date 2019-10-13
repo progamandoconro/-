@@ -11,6 +11,19 @@ import (
 
 )
 
+
+func main() {
+
+	frequent()
+
+        for i:= 1; i <= 10; i++{
+        	hiragana()
+        }
+	
+	game()
+
+}
+
 func frequent() {
 
 	a := "人一丨口日目儿見凵山出十八木未丶来大亅了子心土冂田思二丁彳行寸寺時卜上丿刀分厶禾私中彐尹事可亻何自乂又皮彼亠方生月門間扌手言女本乙气気干年三耂者刂前勹勿豕冖宀家今下白勺的云牛物立小文矢知入乍作聿書学合"
@@ -39,14 +52,19 @@ func frequent() {
 
 }
 
-func main() {
+func hiragana () {
+var message string
+   
+     fmt.Println("Ingresa ROMANJI a transformar a HIRAGANA\n")
+     fmt.Scanln(&message)
+     k := kana.RomajiToHiragana(message)
+     fmt.Println(message + " en Hiragana se escribe:\n")
+     fmt.Println(k)
+     fmt.Println( "\n")
 
-	frequent()
+}
 
-        for i:= 1; i <= 10; i++{
-        hiragana()
-        }
-
+func game () {
 
 	ranDic()
 
@@ -151,10 +169,7 @@ func main() {
 			time.Sleep(20 * time.Millisecond)
 
 		}
-
-	}
-
-	
+	}	
 }
 
 func LinesInFile(fileName string) []string {
@@ -185,22 +200,5 @@ func ranDic() {
 		r := r1.Intn(6394)
 		fmt.Println(lines[r])
 		time.Sleep(30 * time.Second)
-
 	}
 }
-
-
-
-func hiragana () {
-var message string
-   
-     fmt.Println("Ingresa ROMANJI a transformar a HIRAGANA\n")
-     fmt.Scanln(&message)
-     k := kana.RomajiToHiragana(message)
-     fmt.Println(message + " en Hiragana se escribe:\n")
-     fmt.Println(k)
-     fmt.Println( "\n")
-
-
-}
-
