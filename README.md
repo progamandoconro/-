@@ -7,10 +7,10 @@
 ### Usar con golang:     
 
      cd アプリ/大き     
-     go run kangi.go
+     go run kanji.go
 
 ### Usar con Docker:
 
      docker build . -t kanji
      docker run -it kanji
-     go run kangi.go
+     go run kanji.go
